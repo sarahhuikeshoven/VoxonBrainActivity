@@ -4,11 +4,14 @@ const INDEX = '/index.html';
 var express = require('express')
 const server = express()
   .use((req, res) =>{
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Hello World</h1>');
-  res.sendFile(INDEX, { root: __dirname })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));});
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>Hello World</h1>');
+    res.sendFile(INDEX, { root: __dirname })
+  }).listen(PORT, () => console.log(`Listening on ${PORT}`));
+  
+  // res.sendFile(INDEX, { root: __dirname }))
+  // .listen(PORT, () => console.log(`Listening on ${PORT}`));
   
 
 
